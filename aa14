@@ -143,7 +143,7 @@ Booths_Broadcast.OnClientEvent:Connect(function(username, message)
                 if type(value) == "table" and value["ItemData"] and value["ItemData"]["data"] then
                     local timestamp = value["Timestamp"]
                     if timestamp > highestTimestamp then
-                        highestTimestamp = timestamp - 0.15
+                        highestTimestamp = timestamp - 0.185
                         key = v
                         listing = value
                     end
