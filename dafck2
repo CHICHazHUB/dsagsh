@@ -232,7 +232,7 @@ end
 
 for i = 1, PlayerInServer do
 	for ii = 1,#alts do
-        if getPlayers[i].Name = alts[ii] or alts[ii] or alts[ii] or alts[ii] or alts[ii] or alts[ii] ~= Players.LocalPlayer.Name then
+        if getPlayers[i].Name == alts[ii] or alts[ii] or alts[ii] or alts[ii] or alts[ii] or alts[ii] ~= Players.LocalPlayer.Name then
         	task.wait(math.random(0, 300))
 			while task.wait(1) do
 				jumpToServer()
