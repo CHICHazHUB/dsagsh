@@ -133,10 +133,10 @@ local function tryPurchase(uid, gems, item, version, shiny, amount, username, cl
     local boughtPet, boughtMessage = game:GetService("ReplicatedStorage").Network.Booths_RequestPurchase:InvokeServer(playerid, uid)
     processListingInfo(uid, gems, item, version, shiny, amount, username, boughtPet, class, boughtMessage, snipeNormal)
 end
-
+s
 Booths_Broadcast.OnClientEvent:Connect(function(username, message)
         if type(message) == "table" then
-            local highestTimestamp = +math.min -- Initialize with the smallest possible number
+            local highestTimestamp = math.min -- Initialize with the smallest possible number
             local key = nil
             local listing = nil
             for v, value in pairs(message["Listings"] or {}) do
