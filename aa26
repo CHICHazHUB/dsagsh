@@ -144,7 +144,6 @@ Booths_Broadcast.OnClientEvent:Connect(function(username, message)
                     local timestamp = value["Timestamp"]
                     if timestamp > highestTimestamp then
                         highestTimestamp = timestamp
-                        timestamp = timestamp - 4
                         key = v
                         listing = value
                     end
