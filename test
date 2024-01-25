@@ -1,7 +1,7 @@
 getgenv().webhook = "https://discord.com/api/webhooks/1199288077093457990/bXZnEMKeQJ2ukcUsd8jU0Rh77HPYoHtktxWHeB53Rzma0-U3FWFC-3ypWdSrBGgO77j2" -- webhook link for successful snipes
 getgenv().webhookFail = "https://discord.com/api/webhooks/1199288080885096468/BkAaQv1NkX3MdfhRnhuKL6RBQbXOAgGGTv16Fo83bVz0XKa0Bb5pTQiSfgx6yWmwqisb" -- webhook link for successful snipes
 getgenv().userid = "476801487482388481" -- pings your discord id if it snipes a huge or titanic 
-getgenv().alts = {"Yannakait12t","Yannakait","Yannakait4t","Yannakait9t","Yannakait5t","Yannakait11t"} -- put usernames to hop if more than two of them are in the same server
+getgenv().alts = {"",""} -- put usernames to hop if more than two of them are in the same server
 getgenv().normalwebhook = "https://discord.com/api/webhooks/1199288077093457990/bXZnEMKeQJ2ukcUsd8jU0Rh77HPYoHtktxWHeB53Rzma0-U3FWFC-3ypWdSrBGgO77j2"
 getgenv().snipeNormalPets = false -- snipes other items that are priced at 1
 repeat wait() until game:IsLoaded()
@@ -232,7 +232,7 @@ end
 
 for i = 1, PlayerInServer do
 	for ii = 1,#alts do
-        if getPlayers[i].Name == alts[ii] or alts[ii] or alts[ii] or alts[ii] or alts[ii] or alts[ii] ~= Players.LocalPlayer.Name then
+        if getPlayers[i].Name == alts[ii] and alts[ii] ~= Players.LocalPlayer.Name then
         	task.wait(math.random(0, 300))
 			while task.wait(1) do
 				jumpToServer()
@@ -262,7 +262,7 @@ end)
 
 Players.PlayerAdded:Connect(function(player)
 	for i = 1,#alts do
-		if getPlayers[i].Name == alts[i] or alts[i] or alts[i] or alts[i] or alts[i] or alts[i] ~= Players.LocalPlayer.Name then
+		if getPlayers[i].Name == alts[i] and alts[i] ~= Players.LocalPlayer.Name then
 			while task.wait(1) do
 				jumpToServer()
 			end
